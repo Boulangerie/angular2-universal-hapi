@@ -1,7 +1,14 @@
 # Angular 2 Universal with Hapi
-
-
 This project was generated with [universal-cli](https://github.com/devCrossNet/angular-cli) version 1.0.0-alpha.universal.2-2.
+
+## What is the difference with the express server?
+By default, Angular Universal uses express as node server. However, it is possible to use any other server like Hapi. By the way, the Angular Universal team provides views engines for both express and hapi.
+
+The two main differences between the hapi and the express implementations consist in:
+- the hapi dependencies installed in the [package.json](https://github.com/Boulangerie/angular2-universal-hapi/blob/master/package.json) and which replace the express deps
+- the [server.ts](https://github.com/Boulangerie/angular2-universal-hapi/blob/master/src/server.ts) which initializes the hapi server instead of the express one
+
+The project uses a copy of the [hapi-engine](https://github.com/Boulangerie/angular2-universal-hapi/blob/master/src/app/hapi-engine.ts) made by [bisubus](https://github.com/bisubus). It will be updated to use the official [angular2-hapi-engine](https://www.npmjs.com/package/angular2-hapi-engine) once this [pull request](https://github.com/angular/universal/pull/599) is merged.
 
 ## Quick start
 ```sh
